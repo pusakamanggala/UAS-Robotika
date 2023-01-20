@@ -57,3 +57,14 @@ class CartpoleRobot(RobotSupervisor):
             return True
         
         return False
+        
+        def solved(self):
+            if len(self.episodeScoreList) > 100:  # Over 100 trials thus far
+                if np.mean(self.episodeScoreList[-100:]) > 195.0:  # Last 100 episodes' scores average value
+                    return True
+            return False
+            
+        def get_default_observation(self):
+            return [0.0 for _ in range(self.observation_space.shape[0])]
+            
+            
