@@ -28,3 +28,15 @@ class CartpoleRobot(RobotSupervisor):
         self.stepsPerEpisode = 200  # Max number of steps per episode
         self.episodeScore = 0  # Score accumulated during an episode
         self.episodeScoreList = []  # A list to save all the episode scores, used to check if task is solved
+        
+     def get_observations(self):
+        # Position on x axis
+        cartPosition = normalizeToRange(self.robot.getPosition()[0], -0.4, 0.4, -1.0, 1.0)
+        # Linear velocity on x axis
+        cartVelocity = normalizeToRange(self.robot.getVelocity()[0], -0.2, 0.2, -1.0, 1.0, clip=True)
+        # Pole angle off vertical
+        poleAngle = normalizeToRange(self.positionSensor.getValue(), -0.23, 0.23, -1.0, 1.0, clip=True)
+        # Angular velocity y of endpoint
+        endpointVelocity = normalizeToRange(self.poleEndpoint.getVelocity()[4], -1.5, 1.5, -1.0, 1.0, clip=True)
+
+        return [cartPosition, cartVelocity, poleAngle, endpointVelocity]
