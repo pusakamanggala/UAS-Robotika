@@ -25,3 +25,6 @@ class CartpoleRobot(RobotSupervisor):
             wheel.setPosition(float('inf'))  # Set starting position
             wheel.setVelocity(0.0)  # Zero out starting velocity
             self.wheels.append(wheel)
+        self.stepsPerEpisode = 200  # Max number of steps per episode
+        self.episodeScore = 0  # Score accumulated during an episode
+        self.episodeScoreList = []  # A list to save all the episode scores, used to check if task is solved
