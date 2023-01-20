@@ -43,3 +43,17 @@ class CartpoleRobot(RobotSupervisor):
         
      def get_reward(self, action=None):
         return 1
+        
+     def is_done(self):
+        if self.episodeScore > 195.0:
+            return True
+
+        poleAngle = round(self.positionSensor.getValue(), 2)
+        if abs(poleAngle) > 0.261799388:  # 15 degrees off vertical
+            return True
+
+        cartPosition = round(self.robot.getPosition()[2], 2)  # Position on z axis
+        if abs(cartPosition) > 0.39:
+            return True
+        
+        return False
