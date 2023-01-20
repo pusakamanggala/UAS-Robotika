@@ -3,7 +3,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.23607561315003078 0.23607761100136873 0.94262169848764 1.6298557442089872
-  position -0.014896139797904714 -6.748291202936241 3.61058740705157
+  position -0.014899068484936382 -6.0732861886588 3.249854534308589
 }
 TexturedBackground {
 }
@@ -208,6 +208,6 @@ DEF ROBOT Robot {
     density -1
     mass 2
   }
-  controller ""
+  controller "robotSupervisorController"
   supervisor TRUE
 }
