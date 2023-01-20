@@ -79,4 +79,10 @@ class CartpoleRobot(RobotSupervisor):
                 self.wheels[i].setPosition(float('inf'))
                 self.wheels[i].setVelocity(motorSpeed)
             
+        def render(self, mode='human'):
+            print("render() is not used")
+
+        def get_info(self):
+            return None
+            
             
