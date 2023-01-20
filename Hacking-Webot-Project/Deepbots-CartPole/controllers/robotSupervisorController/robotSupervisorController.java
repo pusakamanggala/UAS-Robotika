@@ -67,4 +67,16 @@ class CartpoleRobot(RobotSupervisor):
         def get_default_observation(self):
             return [0.0 for _ in range(self.observation_space.shape[0])]
             
+        def apply_action(self, action):
+            action = int(action[0])
+
+            if action == 0:
+                motorSpeed = 5.0
+            else:
+                motorSpeed = -5.0
+
+            for i in range(len(self.wheels)):
+                self.wheels[i].setPosition(float('inf'))
+                self.wheels[i].setVelocity(motorSpeed)
+            
             
