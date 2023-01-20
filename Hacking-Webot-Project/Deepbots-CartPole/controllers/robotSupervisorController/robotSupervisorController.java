@@ -40,3 +40,6 @@ class CartpoleRobot(RobotSupervisor):
         endpointVelocity = normalizeToRange(self.poleEndpoint.getVelocity()[4], -1.5, 1.5, -1.0, 1.0, clip=True)
 
         return [cartPosition, cartVelocity, poleAngle, endpointVelocity]
+        
+     def get_reward(self, action=None):
+        return 1
