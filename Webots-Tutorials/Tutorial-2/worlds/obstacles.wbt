@@ -4,7 +4,7 @@ WorldInfo {
 }
 Viewpoint {
   orientation -0.197656543074974 0.20699601144370797 0.9581672830075378 1.5620518443091502
-  position 0.10626544648911976 -1.8121779383941692 0.9210704298072939
+  position 0.08751246174602134 -2.174658395858451 1.0770014583771006
 }
 TexturedBackground {
 }
@@ -46,13 +46,13 @@ Solid {
         roughness 1
         metalness 0
       }
-      geometry Sphere {
+      geometry DEF BALL_GEOMETRY Sphere {
         radius 0.05
         subdivision 2
       }
     }
   ]
-  boundingObject Sphere {
+  boundingObject DEF BALL_GEOMETRY Sphere {
     radius 0.05
     subdivision 2
   }
