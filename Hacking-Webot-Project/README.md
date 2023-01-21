@@ -1,5 +1,5 @@
 
-# CartPole Beginner Robot-Supervisor Scheme Tutorial
+# Deepbot - CartPole
 
 UAS MATAKULIAH ROBOTIKA
 
