@@ -3,8 +3,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.11017424844054376 0.8279613166188681 -0.5498560658602502 0.9309107138576809
-  position -1.8333352833951793 1.1043654115764578 2.317167686083329
+  orientation -0.3852373100019556 0.8053759639978156 0.4505127873846051 1.3405456073923812
+  position -0.7168468909392534 -0.34143244323342775 2.3848987818911684
 }
 TexturedBackground {
 }
@@ -61,6 +61,11 @@ Solid {
   children [
     Shape {
       appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "C:/Users/pusak/OneDrive/Documents/Kuliah/Semester 7/Robotika/UAS-Robotika/Webots-Tutorials/Tutorial-3/red_brick_wall.jpg"
+          ]
+        }
         roughness 1
         metalness 0
       }
