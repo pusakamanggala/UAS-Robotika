@@ -4,11 +4,20 @@ WorldInfo {
 }
 Viewpoint {
   orientation 0.23404449515414733 0.7732493375596873 -0.5893289711625799 0.953381416360685
-  position -2.221057200279848 1.0309772708547547 2.3988819020279326
+  position -1.9883568440745352 0.9729480313999371 2.1380422660723637
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 3
+  location 0 0.3 0
+}
+DirectionalLight {
+  direction 0 -1 0
+  intensity 0
 }
 WoodenBox {
   translation -0.289881 0.190898 0.04996076000003104
@@ -31,10 +40,6 @@ WoodenBox {
   mass 0.2
 }
 E-puck {
-  hidden position_0_0 1.245951999634376
-  hidden position_0_1 1.245951999682088
-  hidden rotation_1 0 1 0 1.245951999634376
-  hidden rotation_2 0 1 0 1.2459519996820883
   translation 0.09699247672310515 0.10989226591526702 -3.194439755038227e-05
   rotation 0.0009545190956815714 0.0017123141759523312 -0.9999980784348831 1.017081403980457
   controller "epuck_go_forward"
