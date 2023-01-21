@@ -1,0 +1,120 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.23404449515414733 0.7732493375596873 -0.5893289711625799 0.953381416360685
+  position -2.221057200279848 1.0309772708547547 2.3988819020279326
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+WoodenBox {
+  translation -0.289881 0.190898 0.04996076000003104
+  rotation -5.452298609105179e-11 8.893357899306056e-12 -1 1.9082799989946258e-07
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation -0.291785740233441 -0.2352293587050788 0.049960760000188446
+  rotation -1.1976748528408937e-10 3.9907954951782933e-10 1 0.5781709219339202
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation 0.1525831200493321 0.3067885313978184 0.04996076000018812
+  rotation 2.2867810221802463e-10 -2.9549094914813753e-10 1 0.5973212640373733
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+E-puck {
+  hidden position_0_0 1.245951999634376
+  hidden position_0_1 1.245951999682088
+  hidden rotation_1 0 1 0 1.245951999634376
+  hidden rotation_2 0 1 0 1.2459519996820883
+  translation 0.09699247672310515 0.10989226591526702 -3.194439755038227e-05
+  rotation 0.0009545190956815714 0.0017123141759523312 -0.9999980784348831 1.017081403980457
+  controller "epuck_go_forward"
+}
+Floor {
+  size 1 1
+}
+Solid {
+  translation 0.003385 -0.11752 0.09671263727860423
+  rotation 0 0 1 0.2683440000000001
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.00612779 0.463093 0.05
+  rotation 0 1 0 0.006545030000028386
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+}
+Solid {
+  translation -0.451847 0.00554167 0.05
+  rotation -0.003272500951368443 0.003272490951365536 0.999989290712904 1.57081
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(3)"
+}
+Solid {
+  translation 0.443776 0.0142597 0.05
+  rotation -0.003272500951368443 0.003272490951365536 0.999989290712904 1.57081
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(4)"
+}
+Solid {
+  translation -0.00216996 -0.449267 0.05
+  rotation 0 1 0 0.00654503
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(2)"
+}
