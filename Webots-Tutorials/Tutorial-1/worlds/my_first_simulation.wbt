@@ -1,9 +1,10 @@
 #VRML_SIM R2022a utf8
 WorldInfo {
+  basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.3016455082063411 0.10142802215421337 0.9480096748983222 2.5209525567758018
-  position 0.8094660043867368 -0.7265684386739989 0.8255609432668317
+  orientation -0.32941189430180345 0.11635047161421848 0.9369900595244575 2.4992040051190885
+  position 1.0847235924042387 -0.9046695799293678 1.1556484436398242
 }
 TexturedBackground {
 }
@@ -18,18 +19,21 @@ WoodenBox {
   translation 0.436589 -0.0483515 0.05
   rotation 0 0 -1 1.90828e-07
   size 0.1 0.1 0.1
+  mass 0.2
 }
 WoodenBox {
   translation -0.43154 -0.430581 0.05
   rotation 0 0 1 0.680679
   name "wooden box(2)"
   size 0.1 0.1 0.1
+  mass 0.2
 }
 WoodenBox {
   translation 0.437772 0.437892 0.05
   rotation 0 0 1 0.700313
   name "wooden box(1)"
   size 0.1 0.1 0.1
+  mass 0.2
 }
 E-puck {
 }
