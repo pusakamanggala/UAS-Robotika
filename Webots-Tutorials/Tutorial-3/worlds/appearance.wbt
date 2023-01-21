@@ -3,16 +3,24 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.23404449515414733 0.7732493375596873 -0.5893289711625799 0.953381416360685
-  position -1.9883568440745352 0.9729480313999371 2.1380422660723637
+  orientation 0.11017424844054376 0.8279613166188681 -0.5498560658602502 0.9309107138576809
+  position -1.8333352833951793 1.1043654115764578 2.317167686083329
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
+SpotLight {
+  attenuation 0 0 1
+  beamWidth 0.7
+  cutOffAngle 0.78539
+  direction 0 1 -1
+  intensity 10
+  location 4 6 13
+}
 PointLight {
   attenuation 0 0 1
-  intensity 3
+  intensity 0
   location 0 0.3 0
 }
 DirectionalLight {
@@ -73,6 +81,9 @@ Solid {
   children [
     Shape {
       appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
       }
       geometry Box {
         size 1 0.1 0.1
@@ -87,6 +98,9 @@ Solid {
   children [
     Shape {
       appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
       }
       geometry Box {
         size 1 0.1 0.1
@@ -101,6 +115,9 @@ Solid {
   children [
     Shape {
       appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
       }
       geometry Box {
         size 1 0.1 0.1
@@ -115,6 +132,9 @@ Solid {
   children [
     Shape {
       appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
       }
       geometry Box {
         size 1 0.1 0.1
