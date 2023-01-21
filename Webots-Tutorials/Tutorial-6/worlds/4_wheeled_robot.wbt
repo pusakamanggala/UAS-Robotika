@@ -1,0 +1,201 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material2 "dumbell"
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.18293475237065815 0.7653690746600578 -0.6170454245265035 1.1000845853088062
+  position -0.9340178984191161 0.7317053012388912 1.3670819970139172
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+SpotLight {
+  attenuation 0 0 1
+  beamWidth 0.7
+  cutOffAngle 0.78539
+  direction 0 1 -1
+  intensity 10
+  location 4 6 13
+}
+PointLight {
+  attenuation 0 0 1
+  intensity 0
+  location 0 0.3 0
+}
+DirectionalLight {
+  direction 0 -1 0
+  intensity 0
+}
+WoodenBox {
+  translation -0.289881 0.190898 0.049960760000000014
+  rotation -2.6596946591128115e-11 2.2856380987651926e-11 -0.9999999999999999 1.9082799985874198e-07
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation -0.2917857402433722 -0.2352293587115946 0.049960760000000014
+  rotation -1.128363100136133e-16 3.1435544452438435e-16 1 0.5781709219339203
+  name "wooden box(2)"
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+WoodenBox {
+  translation 0.15258312005566188 0.30678853140680723 0.049960760000000014
+  rotation 1.9003187787631038e-16 -2.30319035332286e-16 1 0.5973212640373733
+  name "wooden box(1)"
+  size 0.1 0.1 0.1
+  mass 0.2
+}
+E-puck {
+  hidden position_0_0 2.5320959995832197
+  hidden position_0_1 2.532095999632288
+  hidden rotation_1 0 1 0 2.5320959995832197
+  hidden rotation_2 0 0.9999999999999999 0 2.532095999632288
+  translation 0.12362263002652665 0.0668174705308757 -3.194620472386951e-05
+  rotation 0.0009467397401630146 0.001698365373796226 -0.999998109617674 1.0170813536119936
+  controller "epuck_avoid_collision"
+}
+Floor {
+  size 1 1
+}
+Solid {
+  translation 0.003385 -0.11752 0.0967126374472836
+  rotation 0 0 1 0.26834400000000014
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColorMap ImageTexture {
+          url [
+            "C:/Users/pusak/OneDrive/Documents/Kuliah/Semester 7/Robotika/UAS-Robotika/Webots-Tutorials/Tutorial-3/red_brick_wall.jpg"
+          ]
+        }
+        roughness 1
+        metalness 0
+      }
+      geometry Sphere {
+        radius 0.1
+      }
+    }
+  ]
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.00612779 0.463093 0.05
+  rotation 0 1 0 0.006545030000028386
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+}
+Solid {
+  translation -0.451847 0.00554167 0.05
+  rotation -0.003272500951368443 0.003272490951365536 0.999989290712904 1.57081
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(3)"
+}
+Solid {
+  translation 0.443776 0.0142597 0.05
+  rotation -0.003272500951368443 0.003272490951365536 0.999989290712904 1.57081
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(4)"
+}
+Solid {
+  translation -0.00216996 -0.449267 0.05
+  rotation 0 1 0 0.00654503
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(2)"
+}
+Solid {
+  translation -0.118766 0.236684 0.1
+  rotation 0.049249604527019916 0.7155180657703665 0.6968560640549567 2.52149
+  children [
+    DEF G0 Group {
+      children [
+        Shape {
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+        Transform {
+          translation 0 0 0.06
+          children [
+            Shape {
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 -0.06
+          children [
+            Shape {
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "dumbell"
+  contactMaterial "dumbell"
+  physics Physics {
+    density -1
+    mass 2
+  }
+}
