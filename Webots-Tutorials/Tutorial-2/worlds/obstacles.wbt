@@ -47,12 +47,14 @@ Solid {
         metalness 0
       }
       geometry Sphere {
-        radius 0.1
+        radius 0.05
+        subdivision 2
       }
     }
   ]
   boundingObject Sphere {
-    radius 0.1
+    radius 0.05
+    subdivision 2
   }
   physics Physics {
   }
