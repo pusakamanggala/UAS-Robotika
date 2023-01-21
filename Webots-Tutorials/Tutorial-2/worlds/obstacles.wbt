@@ -3,28 +3,28 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.197656543074974 0.20699601144370797 0.9581672830075378 1.5620518443091502
-  position 0.08751246174602134 -2.174658395858451 1.0770014583771006
+  orientation 0.23404449515414733 0.7732493375596873 -0.5893289711625799 0.953381416360685
+  position -2.221057200279848 1.0309772708547547 2.3988819020279326
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 WoodenBox {
-  translation 0.4365890000798877 -0.0483514999201122 0.049960760000000014
+  translation -0.289881 0.190898 0.0499608
   rotation 1.3291035780205592e-12 -7.488475927018373e-11 -1 1.908279999377864e-07
   size 0.1 0.1 0.1
   mass 0.2
 }
 WoodenBox {
-  translation -0.4298082107375036 -0.4297988888377115 0.04996100105977465
-  rotation -0.00015345656280932096 0.00043746966950334096 0.9999998925356801 0.6698003156824779
+  translation -0.291773 -0.235221 0.049961
+  rotation -0.00015364097805251387 0.000511949926868378 0.9999998571508508 0.578171
   name "wooden box(2)"
   size 0.1 0.1 0.1
   mass 0.2
 }
 WoodenBox {
-  translation 0.43056834970639674 0.43058185591213677 0.04996095760836621
+  translation 0.152575 0.306777 0.049961
   rotation 0.0002933546526171971 -0.0003790641044017685 0.9999998851267197 0.5973213286455127
   name "wooden box(1)"
   size 0.1 0.1 0.1
@@ -39,23 +39,78 @@ Floor {
   size 1 1
 }
 Solid {
-  translation 0.2 0 0.2
+  translation 0.003385 -0.11752 0.2
+  rotation 0 0 1 0.268344
   children [
     Shape {
       appearance PBRAppearance {
         roughness 1
         metalness 0
       }
-      geometry DEF BALL_GEOMETRY Sphere {
-        radius 0.05
-        subdivision 2
+      geometry Sphere {
+        radius 0.1
       }
     }
   ]
-  boundingObject DEF BALL_GEOMETRY Sphere {
-    radius 0.05
-    subdivision 2
+  boundingObject Sphere {
+    radius 0.1
   }
   physics Physics {
   }
+}
+Solid {
+  translation -0.00612779 0.463093 0.05
+  rotation 0 1 0 0.006545030000028386
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+}
+Solid {
+  translation -0.451847 0.00554167 0.05
+  rotation -0.003272500951368443 0.003272490951365536 0.999989290712904 1.57081
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(3)"
+}
+Solid {
+  translation 0.443776 0.0142597 0.05
+  rotation -0.003272500951368443 0.003272490951365536 0.999989290712904 1.57081
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(4)"
+}
+Solid {
+  translation -0.00216996 -0.449267 0.05
+  rotation 0 1 0 0.00654503
+  children [
+    Shape {
+      appearance PBRAppearance {
+      }
+      geometry Box {
+        size 1 0.1 0.1
+      }
+    }
+  ]
+  name "solid(2)"
 }
