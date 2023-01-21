@@ -87,4 +87,8 @@ Solid {
   name "solid(2)"
 }
 Robot {
+  children [
+    Shape {
+    }
+  ]
 }
