@@ -2,13 +2,21 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5773 0.5773 0.5773 2.0944
-  position 0 0 10
-
+  orientation -0.20884358815923978 -0.008273826936724096 0.9779140552587405 3.2190521631069977
+  position 19.736068421411844 2.289325706149246 8.217202846673542
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  floorSize 10 10
+}
+BB-8 {
+  controller ""
+}
+Robot {
+  name "supervisor"
+  controller "supervisor_controller"
+  supervisor TRUE
 }
