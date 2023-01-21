@@ -1,10 +1,15 @@
 #VRML_SIM R2022a utf8
 WorldInfo {
   basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+      material2 "dumbell"
+    }
+  ]
 }
 Viewpoint {
-  orientation -0.3852373100019556 0.8053759639978156 0.4505127873846051 1.3405456073923812
-  position -1.031823558171853 -0.7234415722011471 3.0986304488043483
+  orientation 0.18293475237065815 0.7653690746600578 -0.6170454245265035 1.1000845853088062
+  position -0.9340178984191161 0.7317053012388912 1.3670819970139172
 }
 TexturedBackground {
 }
@@ -151,4 +156,46 @@ Solid {
     }
   ]
   name "solid(2)"
+}
+Solid {
+  translation -0.118766 0.236684 0.1
+  rotation 0.049249604527019916 0.7155180657703665 0.6968560640549567 2.52149
+  children [
+    DEF G0 Group {
+      children [
+        Shape {
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+        Transform {
+          translation 0 0 0.06
+          children [
+            Shape {
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 0 -0.06
+          children [
+            Shape {
+              geometry Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "dumbell"
+  contactMaterial "dumbell"
+  physics Physics {
+    density -1
+    mass 2
+  }
 }
