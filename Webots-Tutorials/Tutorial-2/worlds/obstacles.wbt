@@ -50,4 +50,9 @@ Solid {
       }
     }
   ]
+  boundingObject Sphere {
+    radius 0.1
+  }
+  physics Physics {
+  }
 }
