@@ -88,7 +88,25 @@ Solid {
 }
 Robot {
   children [
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        RotationalMotor {
+        }
+      ]
+    }
     Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 0.2 0.1 0.05
+      }
     }
   ]
+  physics Physics {
+  }
 }
